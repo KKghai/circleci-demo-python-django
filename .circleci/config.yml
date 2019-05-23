@@ -21,6 +21,7 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
+            pip install coverage
       - save_cache:
           key: deps10-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
